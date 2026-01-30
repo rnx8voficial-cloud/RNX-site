@@ -1,20 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Meu primeiro site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio | Seu Nome</title>
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
     body {
-      background: #111;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
       color: #fff;
-      font-family: Arial;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 30px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    header span {
+      color: #00ffd5;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #00ffd5;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    header a:hover {
+      background: #00ffd5;
+      color: #000;
+    }
+
+    .hero {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 0 8%;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      animation: fadeUp 1s ease;
+    }
+
+    .hero-text h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .hero-text button {
+      background: #00ffd5;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    section h3 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .about {
+      max-width: 800px;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 25px;
+      transition: 0.3s;
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+      color: #00ffd5;
+    }
+
+    footer {
+      padding: 40px 8%;
       text-align: center;
-      padding-top: 50px;
+      color: #888;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h2 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>🚀 Site no ar com GitHub Pages</h1>
-  <p>Se você está vendo isso, funcionou!</p>
+
+  <header>
+    <h1><span>Seu</span>Portfólio</h1>
+    <a href="#contato">Contato</a>
+  </header>
+
+  <div class="hero">
+    <div class="hero-text">
+      <h2>Designer & Criador Digital</h2>
+      <p>
+        Eu crio experiências visuais modernas, minimalistas e focadas em resultado.
+        Design, criatividade e tecnologia juntos.
+      </p>
+      <button>Ver projetos</button>
+    </div>
+  </div>
+
+  <section>
+    <h3>Sobre mim</h3>
+    <p class="about">
+      Sou um criador focado em design moderno, interfaces limpas e soluções visuais
+      que realmente chamam atenção. Trabalho com projetos digitais, identidade visual
+      e layouts pensados para conversão e estética.
+    </p>
+  </section>
+
+  <section>
+    <h3>Projetos</h3>
+    <div class="projects">
+      <div class="card">
+        <h4>Projeto 01</h4>
+        <p>Landing page moderna criada com foco em conversão.</p>
+      </div>
+
+      <div class="card">
+        <h4>Projeto 02</h4>
+        <p>Identidade visual minimalista para marca digital.</p>
+      </div>
+
+      <div class="card">
+        <h4>Projeto 03</h4>
+        <p>Interface web inspirada em startups modernas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h3>Contato</h3>
+    <p>Email: seuemail@email.com</p>
+    <p>Instagram: @seuuser</p>
+  </section>
+
+  <footer>
+    © 2026 • Criado por você
+  </footer>
+
 </body>
 </html>
